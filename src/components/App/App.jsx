@@ -5,7 +5,7 @@ import './App.css';
 import Display from '../Display/Display';
 import Legend from '../Legend/Legend';
 import RangeInput from '../RangeInput/RangeInput';
-// import Setting from '../Setting/Setting';
+import Setting from '../Setting/Setting';
 
 function App() {
   return (
@@ -18,6 +18,9 @@ function App() {
 
       <Legend>LENGTH:</Legend>
       <RangeInput />
+
+      <Legend>SETTINGS:</Legend>
+      <Setting title="Include Uppercase" />
     </section>
 
   );

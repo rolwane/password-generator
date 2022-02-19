@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './RangeInput.css';
 
 function RangeInput() {
-  const [value, setValue] = useState(6);
+  const [value, setValue] = useState(10);
 
   const handleChange = ({ target }) => setValue(target.value);
 

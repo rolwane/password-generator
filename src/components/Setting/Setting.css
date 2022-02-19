@@ -1,6 +1,14 @@
 .setting {
-  width: 100%;
+  align-items: center;
   background-color: var(--deep-blue);
-  padding: 15px;
+  border-radius: 8px;
   color: white;
+  display: flex;
+  font-size: 16px;
+  font-weight: 600;
+  height: 55px;
+  justify-content: space-between;
+  margin: 5px 0 10px;
+  padding: 0 15px;
+  width: 100%;
 }

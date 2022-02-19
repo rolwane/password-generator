@@ -4,7 +4,8 @@
   border-radius: 8px;
   display: flex;
   justify-content: space-between;
-  margin: 5px 0 0;
+  height: 55px;
+  margin: 5px 0 20px;
   padding: 15px;
   position: relative;
   width: 100%;
@@ -43,7 +44,7 @@
 }
 
 .progress-bg {
-  background-color: #0B2750;
+  background-color: #13244A;
   height: 2px;
   position: absolute;
   width: 100%;
