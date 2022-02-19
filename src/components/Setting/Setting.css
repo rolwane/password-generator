@@ -1,0 +1,6 @@
+.setting {
+  width: 100%;
+  background-color: var(--deep-blue);
+  padding: 15px;
+  color: white;
+}

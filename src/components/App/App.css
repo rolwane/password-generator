@@ -1,0 +1,13 @@
+.box {
+  background-color: var(--background-blue);
+  min-height: 100vh;
+  padding: 20px;
+  width: 100%;
+}
+
+.box__title {
+  color: white;
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
