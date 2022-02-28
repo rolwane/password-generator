@@ -1,0 +1,22 @@
+.generate-button {
+  align-items: center;
+  background-color: var(--blue);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  display: flex;
+  font-size: 18px;
+  font-weight: 600;
+  justify-content: center;
+  height: 55px;
+  margin: 45px 0 0;
+  outline: none;
+  padding: 15px;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.generate-button:disabled {
+  background-color: #13244A;
+  color: #3c4d72;
+}

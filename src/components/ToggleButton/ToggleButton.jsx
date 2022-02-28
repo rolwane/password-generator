@@ -1,8 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import propTypes from 'prop-types';
+
 import './ToggleButton.css';
 
-function ToggeButton() {
-  const [status, setStatus] = useState(false);
+function ToggeButton({ setting, initialValue }) {
+  const [status, setStatus] = useState(initialValue);
+
+  useEffect(() => {
+    setting(status);
+  }, [status]);
 
   return (
 
@@ -19,3 +25,8 @@ function ToggeButton() {
 }
 
 export default ToggeButton;
+
+ToggeButton.propTypes = {
+  setting: propTypes.func,
+  initialValue: propTypes.bool,
+}.isRequired;

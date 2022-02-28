@@ -7,6 +7,7 @@ import Display from '../Display/Display';
 import Legend from '../Legend/Legend';
 import RangeInput from '../RangeInput/RangeInput';
 import Settings from '../Settings/Settings';
+import GenerateButton from '../GenerateButton/GenerateButton';
 
 function App() {
   const { length } = useContext(Context);
@@ -26,6 +27,8 @@ function App() {
 
       <Legend>settings:</Legend>
       <Settings />
+
+      <GenerateButton />
 
     </section>
   );
