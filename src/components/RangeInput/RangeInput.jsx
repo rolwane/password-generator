@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-no-constructed-context-values */
 
 import React, { useContext } from 'react';
-import MainContext from '../../context';
+import MainContext from '../../context/Context';
 
 import './RangeInput.css';
 
