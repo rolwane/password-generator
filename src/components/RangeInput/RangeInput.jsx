@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
+/* eslint-disable react/jsx-no-constructed-context-values */
+
+import React, { useContext } from 'react';
+import MainContext from '../../context';
+
 import './RangeInput.css';
 
 function RangeInput() {
-  const [value, setValue] = useState(10);
-
-  const handleChange = ({ target }) => setValue(target.value);
+  const { length, setLength } = useContext(MainContext);
 
   return (
-
     <div className="range-container">
       <span>6</span>
 
@@ -17,11 +18,11 @@ function RangeInput() {
           min="6"
           max="32"
           className="slider"
-          value={value}
-          onChange={handleChange}
+          value={length}
+          onChange={({ target }) => setLength(target.value)}
         />
 
-        <span className="progress" style={{ width: `${((value - 6) * 100) / 26}%` }} />
+        <span className="progress" style={{ width: `${((length - 6) * 100) / 26}%` }} />
         <span className="progress-bg" />
       </div>
 

@@ -1,28 +1,34 @@
-import React from 'react';
+/* eslint-disable react/jsx-no-constructed-context-values */
+import React, { useState } from 'react';
+import MainContext from '../../context';
 import './App.css';
 
 // imported components
 import Display from '../Display/Display';
 import Legend from '../Legend/Legend';
 import RangeInput from '../RangeInput/RangeInput';
-import Setting from '../Setting/Setting';
 
 function App() {
+  const [length, setLength] = useState(10);
+
   return (
+    <MainContext.Provider value={{ length, setLength }}>
+      <section className="box">
+        <h1 className="box__title">Password Generator</h1>
 
-    <section className="box">
-      <h1 className="box__title">Password Generator</h1>
+        <Legend>GENERATED PASSWORD:</Legend>
+        <Display />
 
-      <Legend>GENERATED PASSWORD:</Legend>
-      <Display />
+        <Legend>
+          LENGTH:
+          <span>{length}</span>
+        </Legend>
+        <RangeInput />
 
-      <Legend>LENGTH:</Legend>
-      <RangeInput />
+        <Legend>SETTINGS:</Legend>
 
-      <Legend>SETTINGS:</Legend>
-      <Setting title="Include Uppercase" />
-    </section>
-
+      </section>
+    </MainContext.Provider>
   );
 }
 
