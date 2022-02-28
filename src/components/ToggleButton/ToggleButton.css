@@ -1,0 +1,28 @@
+.toggle-button {
+  width: 55px;
+  height: 27px;
+  background-color: #13244A;
+  border: none;
+  border-radius: 55px;
+  display: flex;
+  align-items: center;
+  transition: background 300ms ease;
+}
+
+.toggle-bullet {
+  width: 20px;
+  transition: transform 300ms ease;
+  height: 20px;
+  display: block;
+  background-color: white;
+  border-radius: 50%;
+  margin-left: 4px;
+}
+
+[data-active=true] {
+  background-color: var(--blue);
+}
+
+[data-active=true] .toggle-bullet {
+  transform: translate( calc( 100% + 8px ), 0);
+}

@@ -1,0 +1,14 @@
+.option {
+  align-items: center;
+  background-color: var(--deep-blue);
+  border-radius: 8px;
+  color: white;
+  display: flex;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: space-between;
+  height: 55px;
+  margin: 5px 0 20px;
+  padding: 15px;
+  width: 100%;
+}

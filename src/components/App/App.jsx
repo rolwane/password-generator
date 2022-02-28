@@ -6,6 +6,7 @@ import './App.css';
 import Display from '../Display/Display';
 import Legend from '../Legend/Legend';
 import RangeInput from '../RangeInput/RangeInput';
+import Settings from '../Settings/Settings';
 
 function App() {
   const { length } = useContext(Context);
@@ -14,16 +15,17 @@ function App() {
     <section className="box">
       <h1 className="box__title">Password Generator</h1>
 
-      <Legend>GENERATED PASSWORD:</Legend>
+      <Legend>generated password:</Legend>
       <Display />
 
       <Legend>
-        LENGTH:
+        length:
         <span>{length}</span>
       </Legend>
       <RangeInput />
 
-      <Legend>SETTINGS:</Legend>
+      <Legend>settings:</Legend>
+      <Settings />
 
     </section>
   );

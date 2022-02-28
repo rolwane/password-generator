@@ -1,7 +1,18 @@
 import React from 'react';
+import propTypes from 'prop-types';
 
-function Option() {
-  return <span>option is come here...</span>;
+import './Option.css';
+
+function Option({ children }) {
+  return (
+    <div className="option">
+      {children}
+    </div>
+  );
 }
 
 export default Option;
+
+Option.propTypes = {
+  children: propTypes.any,
+}.isRequired;
