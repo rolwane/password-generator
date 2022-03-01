@@ -1,5 +1,6 @@
 import React, { useState, useContext, useEffect } from 'react';
 import Context from '../../context/Context';
+import generatePassword from '../../services/generatePassword';
 
 import './GenerateButton.css';
 
@@ -7,10 +8,7 @@ function GenerateButton() {
   const [isDisabled, setIsDisabled] = useState(true);
 
   const {
-    uppercase,
-    lowercase,
-    numbers,
-    symbols,
+    length, uppercase, lowercase, numbers, symbols, setPassword,
   } = useContext(Context);
 
   useEffect(() => {
@@ -19,7 +17,11 @@ function GenerateButton() {
   }, [uppercase, lowercase, numbers, symbols]);
 
   const handleGeneratePassword = () => {
+    const options = {
+      uppercase, lowercase, numbers, symbols,
+    };
 
+    setPassword(generatePassword(length, options));
   };
 
   return (
