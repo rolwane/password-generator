@@ -1,18 +1,24 @@
 import React, { useContext } from 'react';
 import Context from '../../context/Context';
+
 import './Display.css';
 
 function Display() {
   const { password } = useContext(Context);
 
+  const copyPassword = () => {
+    navigator.clipboard.writeText(password).then(() => alert('senha copiada!'));
+  };
+
   return (
-    <input
-      type="text"
-      style={{ fontSize: password.length >= 22 ? '11.5px' : '18px' }}
-      value={password || 'CLICK GENERATE'}
+    <button
+      type="button"
       className="display"
-      disabled
-    />
+      onClick={copyPassword}
+    >
+      {password || 'CLICK GENERATE'}
+
+    </button>
   );
 }
 
