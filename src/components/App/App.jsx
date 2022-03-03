@@ -8,29 +8,34 @@ import Legend from '../Legend/Legend';
 import RangeInput from '../RangeInput/RangeInput';
 import Settings from '../Settings/Settings';
 import GenerateButton from '../GenerateButton/GenerateButton';
+import Alert from '../Alert/Alert';
 
 function App() {
-  const { length } = useContext(Context);
+  const { length, alert } = useContext(Context);
 
   return (
-    <section className="box">
-      <h1 className="box__title">Password Generator</h1>
+    <>
+      { alert && <Alert /> }
 
-      <Legend>generated password:</Legend>
-      <Display />
+      <section className="box">
+        <h1 className="box__title">Password Generator</h1>
 
-      <Legend>
-        length:
-        <span>{length}</span>
-      </Legend>
-      <RangeInput />
+        <Legend>generated password:</Legend>
+        <Display />
 
-      <Legend>settings:</Legend>
-      <Settings />
+        <Legend>
+          length:
+          <span>{length}</span>
+        </Legend>
+        <RangeInput />
 
-      <GenerateButton />
+        <Legend>settings:</Legend>
+        <Settings />
 
-    </section>
+        <GenerateButton />
+
+      </section>
+    </>
   );
 }
 

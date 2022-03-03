@@ -18,7 +18,10 @@ function GenerateButton() {
 
   const handleGeneratePassword = () => {
     const options = {
-      uppercase, lowercase, numbers, symbols,
+      uppercase,
+      lowercase,
+      numbers,
+      symbols,
     };
 
     setPassword(generatePassword(length, options));

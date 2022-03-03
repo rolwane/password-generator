@@ -11,6 +11,7 @@ function Provider({ children }) {
   const [symbols, setSymbols] = useState(false);
 
   const [password, setPassword] = useState('');
+  const [alert, setAlert] = useState(false);
 
   const value = {
     length,
@@ -19,6 +20,7 @@ function Provider({ children }) {
     numbers,
     symbols,
     password,
+    alert,
 
     setLength,
     setUppercase,
@@ -26,6 +28,7 @@ function Provider({ children }) {
     setNumbers,
     setSymbols,
     setPassword,
+    setAlert,
   };
 
   return (

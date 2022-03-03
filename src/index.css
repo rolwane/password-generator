@@ -12,3 +12,7 @@
   box-sizing: border-box;
   font-family: 'Source Sans Pro', sans-serif;
 }
+
+body {
+  background-color: var(--background-blue);
+}

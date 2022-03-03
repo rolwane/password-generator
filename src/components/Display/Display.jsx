@@ -4,10 +4,14 @@ import Context from '../../context/Context';
 import './Display.css';
 
 function Display() {
-  const { password } = useContext(Context);
+  const { password, setAlert } = useContext(Context);
 
   const copyPassword = () => {
-    navigator.clipboard.writeText(password).then(() => alert('senha copiada!'));
+    if (password) {
+      navigator.clipboard.writeText(password).then(() => {
+        setAlert(true);
+      });
+    }
   };
 
   return (
